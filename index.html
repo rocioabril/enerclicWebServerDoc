@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enerclic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="ec-sidebar">
+        <a href=""><img src="logo-enerclic-blanco.png" alt="Company Logo" class="ec-sidebar__logo"></a>
+        <!-- tab 1 -->
+        <a href="#introduccion" class="ec-sidebar__tab">
+            <p>Introducción</p>
+        </a>
+
+        <!-- tab 2 -->
+        <a href="#elementos" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Elementos básicos</p>
+        </a>
+
+        <!-- tab 3 -->
+        <a href="#componentes" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Componentes</p>
+        </a>
+
+        <!-- tab 4 -->
+        <a href="#rutas" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Rutas</p>
+        </a>
+
+        <!-- tab 5 -->
+        <a href="#validaciones" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Validaciones</p>
+        </a>
+
+        <!-- tab 6 -->
+        <a href="#datos" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Manipulación de datos</p>
+        </a>
+
+        <!-- tab 6 -->
+        <a href="#traducciones" class="ec-sidebar__tab">
+            <p style="white-space: nowrap;">Traducciones</p>
+        </a>
+    </div>
+    <div class="ec-main">
+        <!-- Seccion de INTRODUCCION -->
+        <form id="introduccion" class="ec-text">
+            <h1 style="padding: 1rem 0;">Introducción</h1>
+            <h2>Descripción General</h2>
+            <p>Este sistema está diseñado para trabajar con HTML, CSS y JavaScript, sin depender de bibliotecas de
+                estilos externas. Las clases y selectores utilizados en el sistema incorporan el prefijo "ec-" de
+                Enerclic para evitar conflictos con las nomenclaturas comunes utilizadas por bibliotecas populares como
+                Bootstrap y otras. De todas maneras, en caso de utilizar este sistema junto con otros frameworks, se
+                debe prestar especial atención a posibles contingencias, como la sobreescritura de clases, para
+                garantizar una integración sin problemas.</p>
+            <ul>
+                <li style="padding: 1rem 0;">
+                    <h3>Guías de Estilo para Componentes:</h3>
+                    <p>Se proporciona un conjunto coherente de estilos y clases que se pueden aplicar a componentes y
+                        elementos con el fin de ayudan a mantener un diseño visual uniforme en toda la
+                        aplicación.</p>
+                </li>
+                <li style="padding: 1rem 0;">
+                    <h3>Guías y Sugerencias de Funcionalidades del Frontend:</h3>
+                    <p>Además de los estilos, se ofrecen guías y sugerencias para implementar funcionalidades comunes en
+                        el frontend. Estas pautas son especialmente útiles para el desarrollo de aplicaciones desce
+                        cero, pero también pueden aplicarse a proyectos existentes que busquen mejorar su diseño y
+                        funcionalidad.</p>
+                </li>
+            </ul>
+
+            <p>Para simplificar la implementación, puedes acceder a un proyecto de ejemplo que sirve como plantilla
+                base. Encontrarás el código completo y la estructura en el siguiente <a href=""
+                    class="ec-link" target="_blank">enlace</a>. Este proyecto de ejemplo puede ser un punto de partida sólido, ya que
+                contiene la estructura básica y con funciones reutilizables que pueden servir de guia para trabajar de
+                manera consistente.</p>
+
+        </form>
+        <!-- Seccion de ELEMENTOS -->
+
+        <form id="elementos" class="ec-text">
+            <h2>Botones</h2>
+            <ul>
+                <li class="ec-item-container">
+                    <h3>Botones Primarios</h3>
+                    <div class="ec-element-container">
+                        <input type="button" value="Save" class="ec-primary-btn">
+                        <h5>HTML</h5>
+                        <pre><code class="ec-code">&lt;input type="button" value="Save" class="ec-primary-btn"&gt;</code></pre>
+                        <h5>CSS</h5>
+                        <code class="ec-code">
+                            .ec-primary-btn {
+                                background: linear-gradient(184deg, #ff711f 0%, #fe5e14 100%);
+                                color: #ffffffd6;
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                padding: 1rem;
+                                cursor: pointer;
+                                border-radius: 3px;
+                                transition: 0.2s;
+                                text-align: center;
+                                width: fit-content;
+                                min-width: 25%;
+                            }
+                            <br>
+                            .ec-primary-btn:hover {
+                                background: linear-gradient(184deg, #fe5e14 0%, #ff4f00 100%);
+                                color: white;
+                            }
+                        </code>
+                    </div>
+
+                </li>
+                <li class="ec-item-container">
+                    <h3>Botones Secundarios</h3>
+                    <div class="ec-element-container">
+                        <input type="button" value="Cancel" class="ec-secondary-btn">
+                        <h5>HTML</h5>
+                        <pre><code class="ec-code">&lt;input type="button" value="Cancel" class="ec-secondary-btn"&gt;</code></pre>
+                        <h5>CSS</h5>
+                        <code class="ec-code">
+                            .ec-secondary-btn {
+                                background-color: transparent;
+                                color: #66758c;
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                padding: 1rem;
+                                cursor: pointer;
+                                border: 1px solid #7a7a7a;
+                                border-radius: 3px;
+                                transition: 0.2s;
+                                flex-grow: 1;
+                                text-align: center;
+                                width: fit-content;
+                                min-width: 25%;
+                            }
+                            <br>
+                            .ec-secondary-btn:hover {
+                                color: #fe5e14;
+                                border: 1px solid #fe5e14;
+                                ;
+                            }
+                        </code>
+                    </div>
+                </li>
+            </ul>
+
+
+            <h2>Campos</h2>
+            <ul>
+                <li>
+                    <h3>Input</h3>
+                    <div class="ec-element-container">
+                        <div class="ec-container">
+                            <input type="text" class="ec-field" placeholder="Input">
+                        </div>
+                        <h5>HTML</h5>
+                        <pre><code class="ec-code">&lt;input type="text" class="ec-field" placeholder="Input"&gt;</code></pre>
+                        <h5>CSS</h5>
+
+                        <code class="ec-code">
+                            .ec-field {
+                                width: 100%;
+                                min-width: 235px;
+                                background: #f2f0f0;
+                                padding: 0.8rem;
+                                border-radius: 3px;
+                                flex: 1;
+                            }
+                            <br>
+                            .ec-field:focus {
+                                background: #ebebeb;
+                            }
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Select</h3>
+                    <div class="ec-element-container">
+                        <div class="ec-container">
+                            <select class="ec-field">
+                                <option value="" disabled>
+                                    Elige una opción
+                                </option>
+                                <option value="1">
+                                    Opción 1
+                                </option>
+                                <option value="1">
+                                    Opción 2
+                                </option>
+                            </select>
+                        </div>
+                        <h5>HTML</h5>
+                        <pre class="ec-code">
+&lt;select class="ec-field">
+    &lt;option value="" disabled>Elige una opción&lt;/option>
+    &lt;option value="1">Opción 1&lt;/option>
+    &lt;option value="2">Opción 2&lt;/option>
+&lt;/select></pre>
+                        <h5>CSS</h5>
+                        <pre class="ec-code ec-wrap">
+                            .ec-field {
+                                width: 100%;
+                                min-width: 235px;
+                                background: #f2f0f0;
+                                padding: 0.8rem;
+                                border-radius: 3px;
+                                flex: 1;
+                            }
+                            <br>
+                            .ec-field:focus {
+                                background: #ebebeb;
+                            }
+                        </pre>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>checkbox</h3>
+                    <div class="ec-element-container">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <h5>HTML</h5>
+                        <pre class="ec-code">
+&lt;label class="switch">
+    &lt;input type="checkbox" checked>
+    &lt;span class="slider">&lt;/span>
+&lt;/label></pre>
+                        <h5>CSS</h5>
+                        <pre class="ec-code" style="white-space: normal;">
+.switch  font-size: 8px !important; position: relative; display: inline-block; width: 3.5em; height: 2em; margin: 0.5rem; <br>
+.switch input  opacity: 0; width: 0; height: 0; <br>
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0;bottom: 0; background-color: #d4d8e3; transition: .4s; border-radius: 30px; min-width: 27px; }
+                        <br>.slider:before {
+                                position: absolute;
+                                content: "";
+                                height: 1.4em;
+                                width: 1.4em;
+                                border-radius: 20px;
+                                left: 0.3em;
+                                bottom: 0.3em;
+                                background-color: white;
+                                transition: .4s;
+                            }
+                        <br>
+                            input:checked+.slider {
+                                background-color: #fe5e14;
+                            }
+                        <br>
+                            input:focus+.slider {
+                                box-shadow: 0 0 1px var(--enerclicColor);
+                            }
+                        <br>
+                            input:checked+.slider:before {
+                                transform: translateX(1.5em);
+                            }
+                        </pre>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Iconos</h2>
+            <div class="ec-element-container">
+                <div style="display: flex; gap: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-gear title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-broadcast title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-info-lg title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-wifi title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z" />
+                        <path
+                            d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z" />
+                    </svg>
+                </div>
+                <h5>HTML</h5>
+                <p class="ec-description">Este es un ejemplo de icono de Boostrap que al ser importado de esta
+                    manera directamente en el código no necesita instalación de Boostrap ni conexión a internet.
+                    Si se opta por esta opción es recomendable separar los iconos en otros ficheros e
+                    importarlos para no afectar la claridad del código. Estos svg pueden obtenerse desde <a
+                        href="https://icons.getbootstrap.com/" target="_blank" class="ec-link">Boostrap Icons</a>. De todas
+                    formas, la clase .title__icon-bg puede aplicarse independientemente del recurso que elijas para tus
+                    iconos.</p>
+                <pre class="ec-code ec-wrap">
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+class="bi bi-gear <b>title__icon-bg</b>" viewBox="0 0 16 16">
+    &lt;path
+d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 
+8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+    &lt;path
+d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 
+2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 
+1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 
+0 0 1 1.255-.52l.292.16c.1.64.893 3.434-.902 2.54l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527-1.79-3.065 
+0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a.873.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a.873.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a.873.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a.873.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291a.873.873 0 0 0 2.692-1.115l.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094a.873.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a.873.873 0 0 0 2.692-1.115l.094-.319z" />
+&lt;/svg>
+</pre>
+                <h5>CSS</h5>
+                <pre class="ec-code ec-wrap">
+                            .title__icon-bg {
+                                background-color: #fe5e14;
+                                border-radius: 25px;
+                                padding: 5px;
+                                box-shadow: 3px 3px 6px #bebebe,
+                                    -3px -3px 6px #ffffff;
+                            }</pre>
+            </div>
+        </form>
+        <!-- Seccion de COMPONENTES -->
+        <section id="componentes" class="ec-text">
+            <h2>Sidebar</h2>
+            <p>Este panel lateral incluye espacio para un logotipo, pestañas para la navegación
+                en secciones del sitio web y un selector de idioma. La implementacion de las traducciones se detallarán
+                más adelante en este mismo documento. Si no es necesario traducir la página, simplemente omita incluir
+                el elemento #ec-sidebar__select-lang y las clases .ec-sidebar__select-lang-container y
+                .ec-sidebar__select-lang.
+                Puedes ver como implementar un sistema de rutas para este panel desde el frontend en la seccion de <a
+                    href="" class="ec-link" target="_blank">rutas</a>.</p>
+            <div class="ec-element-container">
+                <div>
+                    <div class="ec-sidebar ec-sidebar-fic">
+                        <a href="javascript:void(0)"><img src="logo-enerclic-blanco.png" alt="Company Logo"
+                                class="ec-sidebar__logo"></a>
+                        <div class="ec-sidebar__select-lang-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-translate" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                            </svg>
+                            <select name="" id="" class="ec-sidebar__select-lang">
+                                <option value="en">EN</option>
+                                <option value="es">ES</option>
+
+                            </select>
+                        </div>
+                        <a href="javascript:void(0)" class="ec-sidebar__tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>
+                            <p>información</p>
+                        </a>
+                        <a href="javascript:void(0)" class="ec-sidebar__tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-gear" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                <path
+                                    d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                            </svg>
+                            <p>Configuracion</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ec-element-container">
+                    <h5>HTML</h5>
+
+
+
+                    <pre class="ec-code">
+    &lt;div class="ec-sidebar">
+        &lt;a href="">&lt;img src="incluir-logo.png" alt="Company Logo" class="ec-sidebar__logo">&lt;/a>
+            &lt;div class="ec-sidebar__select-lang-container">
+                &lt;!-- icono de idioma -->
+                &lt;select name="" id="ec-sidebar__select-lang" class="ec-sidebar__select-lang">
+                    &lt;option value="en">EN&lt;/option>
+                    &lt;option value="es">ES&lt;/option>
+                &lt;/select>
+            &lt;/div>
+        &lt;a href="" class="ec-sidebar__tab">&lt;!-- incluir icono -->&lt;p>información&lt;/p>&lt;/a>
+        &lt;a href="" class="ec-sidebar__tab">&lt;!-- incluir icono -->&lt;p>Configuración&lt;/p>
+        &lt;/a>
+    &lt;/div>
+</pre>
+
+                    <h5>css</h5>
+                    <p class="ec-description">El sidebar (menú lateral) contiene position fixed, por lo que probablemente
+                        el contenedor hermano deba tener un margin-left igual al ancho del sidebar.</p>
+                    <pre class="ec-code ec-wrap">
+.ec-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0;
+    padding-bottom: 0rem;
+    background: linear-gradient(184deg, rgba(50, 50, 50, 1) 0%, rgba(29, 29, 29, 1) 100%);
+    font-weight: 300;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+<br>
+.ec-sidebar__logo {
+    width: 70%;
+    padding: 2rem;
+}
+<br>
+.ec-sidebar__select-lang-container{
+    display: flex;
+    padding: 0.5rem;
+    margin: 1rem 1.5rem;
+    gap: 0.5rem;
+}
+<br>
+.ec-sidebar__select-lang {
+    border-left: 3px solid transparent;
+    display: flex;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: #e6dfdf;
+    width: 70px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+<br>
+.ec-sidebar__select-lang:hover {
+    border: 1px solid #e6dfdfb1;
+}
+<br>
+.ec-sidebar__select-lang option {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+<br>
+.ec-sidebar__tab {
+    padding: 1rem 2rem;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+<br>
+.ec-sidebar__tab:hover,
+.selected-tab {
+    color: var(--enerclicColor);
+}
+<br>
+@media (min-width: 768px) {
+    .ec-sidebar {
+        width: 225px;
+        justify-content: start;
+        padding-bottom: 0;
+        position: fixed;
+        height: 100vh;
+    }
+    .ec-sidebar__logo {
+        width: 100%;
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <h2>Formularios</h2>
+            <div class="ec-element-container">
+                <form action="" class="ec-form">
+                    <h1 class="form__title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                            class="bi bi-gear title__icon-bg" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                            <path
+                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                        </svg>
+                        <p>Formulario</p>
+                    </h1>
+                    <div class="ec-form-content">
+                        <div class="field-container ec-border-bottom">
+                            <label for="field1">Label</label>
+                            <div class="ec-input-container">
+                                <input id="field1" type="text" class="ec-field form1-field" placeholder="Input 1">
+                            </div>
+                        </div>
+                        <div class="field-container">
+                            <label for="field2">Label</label>
+                            <div class="ec-input-container">
+                                <select class="ec-field">
+                                    <option value="" disabled>
+                                        Elige una opción
+                                    </option>
+                                    <option value="1">
+                                        Opción 1
+                                    </option>
+                                    <option value="1">
+                                        Opción 2
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advance-trigger" id="advance_trigger-form1">
+                        <span>Advanced setup</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                            id="advance_arrow-form1" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg>
+                    </div>
+                    <div class="advance-content hideElement" id="advance_content-form1">
+
+                        <div class="field-container">
+                            <label for="field3">Label</label>
+                            <div class="ec-input-container">
+                                <label class="switch">
+                                    <input type="checkbox" id="field3" class="form1-field">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ec-form__footer">
+                        <input type="button" value="Save" class="ec-primary-btn">
+                    </div>
+                </form>
+                <h5>HTML</h5>
+                <pre class="ec-code">
+    &lt;form action="" id="<b>form1</b>" class="ec-form">
+        &lt;h1 class="form__title">
+            &lt;!-- añadir icono con clase .title__icon-bg  -->
+            &lt;p>Formulario&lt;/p>
+        &lt;/h1>
+        &lt;div class="ec-form-content">
+            &lt;div class="field-container ec-border-bottom">
+                &lt;label for="field1">Label&lt;/label>
+                &lt;div class="ec-input-container">
+                    &lt;input id="field1" type="text" class="ec-field form1-field" placeholder="Input 1">
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="field-container">
+                &lt;label for="field2">Label&lt;/label>
+                &lt;div class="ec-input-container">
+                    &lt;select class="ec-field">
+                        &lt;option value="" disabled>Elige una opción&lt;/option>
+                        &lt;option value="1">Opción 1&lt;/option>&lt;option value="2">Opción 2&lt;/option>
+                    &lt;/select>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="advance-trigger" id="<b>advance_trigger-form1</b>">
+            &lt;span>Advanced setup&lt;/span>
+            &lt;svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" 
+            id="<b>advance_arrow-form1</b>" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                &lt;path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 
+                1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506">
+                &lt;/path>
+            &lt;/svg>
+        &lt;/div>
+        &lt;div class="advance-content hideElement" id="<b>advance_content-form1</b>">
+            &lt;div class="field-container">
+                &lt;label for="field3">Label&lt;/label>
+                &lt;div class="ec-input-container">
+                    &lt;label class="switch">
+                    &lt;input type="checkbox" id="field3" class="form1-field">&lt;span class="slider">&lt;/span>
+                    &lt;/label>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="ec-form__footer">&lt;input type="button" value="Save" class="ec-primary-btn">&lt;/div>
+    &lt;/form>
+</pre>
+
+                <h5>CSS</h5>
+                <pre class="ec-code ec-wrap">
+.ec-form {
+    width: 100%;
+    background: white;
+    border: 1px solid #dadada82;
+    display: flex;
+    flex-direction: column;
+}
+<br>
+.ec-form label {
+    font-size: 0.9rem;
+}
+<br>
+.form__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #efeded;
+    flex: 1;
+}
+<br>
+.title__icon-bg {
+    background-color: #fe5e14;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 3px 3px 6px #bebebe,
+        -3px -3px 6px #ffffff;
+}
+<br>
+.field-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+<br>
+.field-container label {
+    font-weight: 600;
+    white-space: nowrap;
+    flex: 1;
+}
+<br>
+.ec-field {
+    width: 100%;
+    min-width: 235px;
+    background: #ebebeb;
+    padding: 0.8rem;
+    border-radius: 3px;
+    flex: 1;
+    border-bottom: 2px solid #b4bac53d;
+}
+<br>
+.ec-field:focus {
+    border-bottom: 2px solid #71747b3d;
+}
+<br>
+.advance-trigger {
+    display: flex;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-top: 1px solid #efeded;
+    font-weight: 600;
+}
+<br>
+.advance-trigger:hover {
+    background-color: #d4d8e3;
+    cursor: pointer;
+}
+<br>
+.advance-content {
+    border-top: 1px solid #efeded;
+}
+<br>
+.spin {
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+<br>
+.ec-form__footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #efeded;
+}
+<br>
+.hideElement {
+    display: none;
+}
+
+            </pre>
+
+                <h5>JAVASCRIPT</h5>
+                <div style="line-height: 2em">
+                    <div>
+                        <div class="subtitle">toggleAdvanceContent()</div>
+                        Esta función se encarga de mostrar u ocultar contenido avanzado en tu web cuando se hace clic en
+                        un
+                        "trigger" correspondiente. Para que funcione correctamente, es esencial que sigas una convención
+                        de
+                        nomenclatura para los IDs de los elementos HTML. A continuación, se describen las clases y IDs
+                        requeridos:
+                    </div>
+                    <div class="subtitle">Requerimientos</div>
+                    <ul>
+                        <li>
+                            El trigger deben tener class="advance-trigger"
+                        </li>
+                        <li>
+                            El trigger debe tener id="advance_trigger-form1"
+                            la terminacion form1 es reemplazable por cualquier termino, pero es recomendable que sea el
+                            ID
+                            del formulario en el que se encuentra, para mayor claridad.
+                        </li>
+                        <li>
+                            La flecha debe tener el id="advance_arrow-form1"
+                        </li>
+                        <li>
+                            El contenido avanzado debe tener el ID="advance_content-form1"
+                        </li>
+                        <li>
+                            Es necesario incluir en css las clases .hideElement y .spin
+                        </li>
+                    </ul>
+                </div>
+
+
+                <pre class="ec-code">
+const advanceTriggers = document.querySelectorAll('.<b>advance-trigger</b>');
+
+const toggleAdvanceContent = () =>{
+    advanceTriggers.forEach(trigger => {
+        trigger.addEventListener("click", () => {
+            const form = trigger.id.split("-")[1]
+            const container = document.getElementById(`<b>advance_content-</b>${form}`)
+            const arrow = document.getElementById(`<b>advance_arrow-</b>${form}`)
+            container.classList.toggle("hideElement")
+            arrow.classList.toggle("spin")
+        })
+    })
+}</pre>
+            </div>
+            <h2>Modals</h2>
+            <div class="ec-element-container" style="line-height: normal;">
+                <input type="button" value="Open" class="ec-primary-btn" id="openModalBtn">
+
+                <div id="form1-modal" class="ec-modal hideElement">
+                    <div class="ec-modal__content">
+                        <div class="ec-modal__header">
+                            <span class="ec-close" id="closeModalBtn" style="font-size: 2rem;">&times;</span>
+                            <div class="ec-modal__icon-title"><svg xmlns="http://www.w3.org/2000/svg" width="28"
+                                    height="28" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                </svg>
+                                <span>Modal de Ejemplo</span>
+                            </div>
+                        </div>
+                        <div class="ec-modal__body">
+                            <p style="text-align: center;">Contenido del modal</p>
+                        </div>
+                        <div class="ec-modal__footer">
+                            <input type="button" value="Cancel" class="ec-secondary-btn" id="cancelModalBtn">
+                            <input type="button" value="Save" class="ec-primary-btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="form1-modal" class="ec-modal hideElement">
+                <div class="ec-modal__content">
+                    <div class="ec-modal__header">
+                        <!-- Incluir icono -->
+                        <span class="ec-close" id="closeModalBtn" style="font-size: 2rem;">&times;</span>
+                        <div class="ec-modal__icon-title">
+                            <span>Modal de Ejemplo</span>
+                        </div>
+                    </div>
+                    <div class="ec-modal__body">
+                        <p style="text-align: center;">Contenido del modal</p>
+                    </div>
+                    <div class="ec-modal__footer">
+                        <input type="button" value="Cancel" class="ec-secondary-btn" id="cancelModalBtn">
+                        <input type="button" value="Save" class="ec-primary-btn">
+                    </div>
+                </div>
+            </div>
+            <pre class="ec-code">
+&lt;div id="form1-modal" class="ec-modal hideElement">
+    &lt;div class="ec-modal__content">
+        &lt;div class="ec-modal__header">
+            &lt;!-- Incluir icono -->
+            &lt;span class="ec-close" id="closeModalBtn" style="font-size: 2rem;">&times;&lt;/span>
+            &lt;div class="ec-modal__icon-title">
+            &lt;span>Modal de Ejemplo&lt;/span>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="ec-modal__body">&lt;p>Contenido del modal&lt;/p>&lt;/div>
+        &lt;div class="ec-modal__footer">
+            &lt;input type="button" value="Cancel" class="ec-secondary-btn" id="cancelModalBtn">
+            &lt;input type="button" value="Save" class="ec-primary-btn">
+        &lt;/div>
+    &lt;/div>
+&lt;/div></pre>
+            <h5>CSS</h5>
+            <pre class="ec-code ec-wrap">
+                .ec-modal {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+                <br>
+                .ec-modal__content {
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
+                }
+                <br>
+                .ec-close {
+                    cursor: pointer;
+                }
+                <br>
+                .ec-modal__header {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    padding: 0.5rem 1rem;
+                    align-items: center;
+                }
+                <br>
+                .ec-modal__icon-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                <br>
+                .ec-modal__header div {
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+                <br>
+                .ec-modal__body {
+                    padding: 2rem 1rem;
+                    border-top: 1px solid #efeded;
+                    border-bottom: 1px solid #efeded;
+                }
+                <br>
+                .ec-modal__footer {
+                    padding: 1rem;
+                    display: flex;
+                    gap: 1rem;
+                }
+                <br>
+                .ec-modal__footer input {
+                    flex: 1;
+                }
+                <br>
+                .hideElement {
+                    display: none;
+                }
+            </pre>
+            <h5>JAVASCRIPT</h5>
+            <pre class="ec-code">
+const modal = document.getElementById('form1-modal');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const cancelModalBtn = document.getElementById('cancelModalBtn');
+
+// Abrir modal
+openModalBtn.addEventListener('click', () => modal.classList.remove("hideElement"));
+
+// Cerrar modal con X y cancel
+[closeModalBtn, cancelModalBtn].forEach(btn => 
+    btn.addEventListener('click', () => { 
+        modal.classList.add("hideElement")
+}))
+
+// Cerrar el modal haciendo clic fuera del contenido
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.add("hideElement")
+    }
+});
+</pre>
+
+
+        </section>
+        <!-- Seccion de rutas -->
+        <section id="rutas" class="ec-text">
+            <h2>Rutas</h2>
+            <p>
+                Este es un sistema para manejar rutas desde el Frontend, que muestra y oculta secciones al seleccionar
+                tabs, y mantiene la tab seleccionada con el color de Enerclic.
+            </p>
+            <p style="font-weight: 600; text-decoration: underline;">
+                Requerimientos
+            </p>
+            <ul>
+                <li>
+                    Las tabs deben tener la clase class="ec-sidebar__tab".
+                </li>
+                <li>
+                    Cada tab debe tener de href # + el ID de la seccion que se quiere mostrar ej. href="#form1".
+                </li>
+                <li>
+                    Las secciones que se muestran y ocultan deben tener la clase class="ec-section".
+                </li>
+            </ul>
+            <h5>HTML</h5>
+            <pre class="ec-code">
+&lt;div class="ec-sidebar">
+    &lt;a href="#<b>form1</b>" class="<b>ec-sidebar__tab</b>">&lt;p>Formulario 1&lt;/p>&lt;/a>
+    &lt;a href="#<b>form2</b>" class="<b>ec-sidebar__tab</b>">&lt;p>Formulario 2&lt;/p>&lt;/a>
+&lt;/div>
+&lt;div class="ec-main">
+    &lt;form id="<b>form1</b>" class="<b>ec-section</b>">Form 1&lt;/form>
+    &lt;form id="<b>form2</b>" class="<b>ec-section</b>">Form 1&lt;/form>
+&lt;/div></pre>
+            <h5>CSS</h5>
+            <pre class="ec-code ec-wrap">
+    .ec-sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #e0e0e0;
+        padding-bottom: 0rem;
+        background: linear-gradient(184deg, rgba(50, 50, 50, 1) 0%, rgba(29, 29, 29, 1) 100%);
+        font-weight: 300;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+    <br>
+    .ec-sidebar__tab {
+        padding: 1rem 2rem;
+        color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    <br>
+    .ec-sidebar__tab:hover,
+    .ec-sidebar__selected-tab {
+        color: #fe5e14;
+    }
+    <br>
+    .hideElement {
+        display: none;
+    }
+</pre>
+            <h5>JAVASCRIPT</h5>
+            <pre class="ec-code">
+const sections = document.querySelectorAll('.<b>ec-section</b>');
+
+const hideAllsections = () => sections.forEach(section => {
+    section.classList.add("hideElement")
+});
+const selectTab = (sectionId) => {
+    const tabs = document.querySelectorAll('.<b>ec-sidebar__tab</b>');
+    tabs.forEach(tab => {
+        if (tab.getAttribute('href') === `#${sectionId}`) {
+            tab.classList.add('.ec-sidebar__selected-tab');
+        } else {
+            tab.classList.remove('.ec-sidebar__selected-tab');
+        }
+    });
+}
+const showSectionForCurrentRoute = () => {
+    const currentRoute = window.location.hash;
+    const sectionId = currentRoute.substring(1);
+    hideAllsections();
+    selectTab(sectionId);
+    const sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.classList.remove("hideElement");
+    }
+}
+
+// Si no hay una ruta en la URL establece la sección que se muestra al iniciar la web
+if (window.location.hash === "") {
+    window.location.hash = "form1";
+}
+
+// Llamar a showSectionForCurrentRoute() al cambiar de ruta y al iniciar la web
+window.addEventListener('hashchange', showSectionForCurrentRoute);
+showSectionForCurrentRoute();</pre>
+        </section>
+        <!-- Seccion de VALIDACIONES -->
+        <section id="validaciones" class="ec-text">
+            <h2>Validaciones</h2>
+            <p>En este ejemplo de formulario los campos son válidos siempre que no se encuentren vacios. Tiene feedback
+                tanto en tiempo real como al enviar el formulario. Si se opta por utilizar únicamente el feedback al
+                enviar se debera llamar a clearErrors siempre que se envie el formulario. </p>
+            <form id="form2" class="ec-form ec-section">
+                <h1 class="form__title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-gear title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+                    <p>Formulario</p>
+                </h1>
+                <div class="ec-form-content">
+                    <div class="field-container ec-border-bottom">
+                        <label for="field4">Label</label>
+                        <div class="ec-input-error-container">
+                            <div class="ec-input-container">
+                                <input id="field4" type="text" class="ec-field form2-field" placeholder="Input 4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#e72727"
+                                    id="field4-error-icon"
+                                    class="bi bi-exclamation-circle-fill ec-invalid-feedback-icon hideElement"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                </svg>
+                            </div>
+                            <small class="ec-invalid-feedback-msg hideElement" id="field4-error-msg">El input no puede
+                                permanacer
+                                vacio</small>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <label for="field5">Label</label>
+                        <div class="ec-input-error-container">
+                            <div class="ec-input-container">
+                                <input id="field5" type="text" class="ec-field form2-field" placeholder="Input 5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#e72727"
+                                    id="field5-error-icon"
+                                    class="bi bi-exclamation-circle-fill ec-invalid-feedback-icon hideElement"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                </svg>
+                            </div>
+                            <small class="ec-invalid-feedback-msg hideElement" id="field5-error-msg">El input no puede
+                                permanacer
+                                vacio</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-form__footer">
+                    <input type="button" value="Save" id="form2-submit" class="ec-primary-btn">
+                </div>
+            </form>
+            <h5>HTML</h5>
+            <p class="subtitle">Requerimientos</p>
+            <ul>
+                <li>
+                    Todos los campos a validar deben tener una clase que los identifique como campos de ese formulario.
+                    Ej. "form2-field".
+                </li>
+                <li>
+                    el icono debe tener de ID el ID del campo + -error-icon. Ej. id="field5-error-icon".
+                </li>
+                <li>
+                    el texto de error debe tener de ID el ID del campo + -error-msg. Ej. id="field5-error-msg".
+                </li>
+            </ul>
+            <pre class="ec-code">
+&lt;form id="form2" class="ec-form ec-section">
+    &lt;h1 class="form__title">
+        &lt;!-- incluir icono con clase .title__icon-bg -->
+        &lt;p>Formulario 2&lt;/p>
+    &lt;/h1>
+    &lt;div class="ec-form-content">
+        &lt;div class="field-container ec-border-bottom">
+            &lt;label for="field4">Label&lt;/label>
+            &lt;div class="ec-input-error-container">
+                &lt;div class="ec-input-container">
+                    &lt;input id="<b>field4</b>" type="text" class="ec-field <b>form2-field</b>" placeholder="Input 4">
+                    &lt;!-- incluir icono con clase nombre ID del campo + -error-icon <b>field4-error-icon</b>-->
+                &lt;/div>
+                &lt;small class="ec-invalid-feedback-msg hideElement" id="<b>field4-error-msg</b>">
+                    El input no puede permanecer vacío
+                &lt;/small>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="field-container">
+            &lt;label for="field5">Label&lt;/label>
+            &lt;div class="ec-input-error-container">
+                &lt;div class="ec-input-container">
+                    &lt;input id="<b>field5</b>" type="text" class="ec-field <b>form2-field</b>" placeholder="Input 5">
+                    &lt;!-- incluir icono con clase nombre ID del campo + -error-icon <b>field5-error-icon</b> -->
+                &lt;/div>
+                &lt;small class="ec-invalid-feedback-msg hideElement" id="<b>field5-error-msg</b>">
+                    El input no puede permanecer vacío
+                &lt;/small>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="ec-form__footer">
+        &lt;input type="button" value="Save" id="form2-submit" class="ec-primary-btn">
+    &lt;/div>
+&lt;/form></pre>
+            <p class="subtitle">Ejemplo de icono</p>
+            <pre class="ec-code ec-wrap">
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#e72727"
+    id="<b>field4-error-icon</b>"
+    class="bi bi-exclamation-circle-fill ec-invalid-feedback-icon hideElement"
+    viewBox="0 0 16 16">
+    &lt;path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+&lt;/svg>
+</pre>
+            <h5>CSS</h5>
+            <pre class="ec-code ec-wrap">
+                .ec-form {
+                    width: 100%;
+                    background: white;
+                    border: 1px solid #dadada82;
+                    display: flex;
+                    flex-direction: column;
+                }
+                <br>
+                .ec-form label {
+                    font-size: 0.9rem;
+                }
+                <br>
+                .form__title {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-weight: 600;
+                    padding: 1rem 1.5rem;
+                    border-bottom: 1px solid #efeded;
+                    flex: 1;
+                }
+                <br>
+                
+                .title__icon-bg {
+                    background-color: var(--enerclicColor);
+                    border-radius: 25px;
+                    padding: 5px;
+                    box-shadow: 3px 3px 6px #bebebe,
+                        -3px -3px 6px #ffffff;
+                }
+                <br>
+                
+                .field-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 2rem;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                }
+                <br>
+                
+                .field-container label {
+                    font-weight: 600;
+                    white-space: nowrap;
+                    flex: 1;
+                }
+                <br>
+                
+                .ec-field {
+                    width: 100%;
+                    min-width: 235px;
+                    background: #f2f0f0;
+                    padding: 0.8rem;
+                    border-radius: 3px;
+                    flex: 1;
+                }
+                <br>
+                
+                .ec-field:focus {
+                    background: #ebebeb;
+                }
+                <br>
+                
+                .ec-form__footer {
+                    padding: 2rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    border-top: 1px solid #efeded;
+                }
+                <br>
+                
+                .ec-border-bottom {
+                    border-bottom: 1px solid #efeded;
+                }
+                <br>
+                
+                .ec-error {
+                    color: var(--errorColor);
+                }
+                <br>
+                
+                .ec-invalid-feedback {
+                    border: 2px solid var(--errorColor);
+                    background-color: #f8dcdc5e
+                }
+                <br>
+                
+                .ec-input-container {
+                    position: relative;
+                    display: inline-block;
+                }
+                <br>
+                
+                .ec-input-error-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+                    width: 100%;
+                }
+                <br>
+                
+                .ec-invalid-feedback-icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0.8rem;
+                    transform: translateY(-50%);
+                }
+                <br>
+                
+                .ec-invalid-feedback-msg {
+                    font-weight: 600;
+                    padding: 0.2rem;
+                    color: var(--errorColor);
+                }  
+    <br>
+    .hideElement { display: none; }
+</pre>
+            <h5>JAVASCRIPT</h5>
+            <pre class="ec-code">
+const field4 = document.getElementById('<b class="ec-green">field4</b>');
+const field5 = document.getElementById('<b class="ec-green">field5</b>');
+const form2Fields = document.querySelectorAll('.<b>form2-field</b>');
+const form2Submit = document.getElementById("form2-submit");
+
+// Funciones de validación para campos específicos
+const <b class="ec-pink">isField4Valid</b> = () => field4.value !== "";/* Cambiar por la condición necesaria */
+const <b class="ec-pink">isField5Valid</b> = () => field5.value !== "";/* Cambiar por la condición necesaria */
+
+// Objeto que mapea campos a sus funciones de validación correspondientes. 
+// Relacionar el ID del campo como key y la funcion que lo valida como value
+const <b>elementValidationsForm2</b> = {
+    "<b class="ec-green">field4</b>": <b class="ec-pink">isField4Valid</b>,
+    "<b class="ec-green">field5</b>": <b class="ec-pink">isField5Valid</b>
+}
+
+// Función para validar el formulario en conjunto
+const <b>validateForm2</b> = () => <b class="ec-pink">isField4Valid</b>() && <b class="ec-pink">isField5Valid</b>();
+
+// Función para mostrar la feedback de error en un campo específico
+const showInvalidFeedback = (input) => {
+    const icon = document.getElementById(`${input.id}-error-icon`);
+    const msg = document.getElementById(`${input.id}-error-msg`);
+    input.classList.add("ec-invalid-feedback");
+    icon.classList.remove("hideElement");
+    msg.classList.remove("hideElement");
+}
+
+// Función para eliminar feedback de error de un campo específico
+const removeInvalidFeedback = (input) => {
+    const icon = document.getElementById(`${input.id}-error-icon`);
+    const msg = document.getElementById(`${input.id}-error-msg`);
+    input.classList.remove("ec-invalid-feedback");
+    icon.classList.add("hideElement");
+    msg.classList.add("hideElement");
+}
+
+// Función para proporcionar feedback al enviar el formulario
+const feedbackOnSubmit = (allInputs, elementValidations) => {
+    Array.from(allInputs).forEach(input => {
+        const validationFunction = elementValidations[input.id];
+        if (validationFunction !== undefined) {
+            // Mostrar o eliminar feedback de error según la validación
+            if (validationFunction()) {
+                removeInvalidFeedback(input);
+            } else {
+                showInvalidFeedback(input);
+            }
+        }
+    });
+}
+
+// Función para proporcionar feedback en tiempo real durante la interacción con el formulario
+const feedbackInRealTime = (input, validationFn) => {
+    const errorEl = document.getElementById(`${input.id}-error`);
+    const event = input.tagName === "SELECT" ? 'change' : 'input';
+    if (validationFn !== undefined) {
+        input.addEventListener(event, (event) => {
+            // Mostrar o eliminar feedback de error en tiempo real según la validación
+            if (validationFn()) {
+                removeInvalidFeedback(input);
+            } else {
+                showInvalidFeedback(input);
+            }
+        });
+    }
+}
+
+// Asociar funciones de feedback en tiempo real a los campos del formulario
+Array.from(<b>form2Fields</b>).forEach(input => {
+    feedbackInRealTime(input, <b>elementValidationsForm2</b>[input.id]);
+});
+
+// Asociar función de feedback al evento de clic en el botón de envío del formulario
+<b>form2Submit</b>.addEventListener("click", () => {
+    if (<b>validateForm2</b>()) {
+        //enviar formulario
+    } else {
+        feedbackOnSubmit(<b>form2Fields</b>, <b>elementValidationsForm2</b>);
+    }
+});
+
+/* Llamar cuando el usuario cambie de sección sin haber enviado el formulario 
+o cuando lo considere necesario. Ej. clearErrors(<b>form2Fields</b>) */
+const clearErrors = (allInputs) => Array.from(allInputs).forEach(field => removeInvalidFeedback(field))</pre>
+        </section>
+        <!-- Seccion de MANIPULACION DE DATOS -->
+        <section id="datos" class="ec-text">
+            <h2>Manipulación de Datos</h2>
+            <p>La visualización y modificación de información por parte del usuario a través de formularios, puede
+                variar en cada aplicación y depende en gran parte del backend y las características específicas de la
+                aplicación, por lo que no se abordan aquí métodos de conexión con la base de datos ni solicitudes a la API. 
+                No obstante, se presentan funciones reutilizables diseñadas para preparar los datos de manera adecuada antes de su envío.</p>
+            <div class="subtitle">Requerimientos</div>
+            <ul>
+                <li>
+                    Los campos deberán tener como clase el ID del formulario al que pertenecen + "-field" Ej.
+                    class="form3-field".
+                </li>
+                <li>
+                    Los campos deberan tener como ID la key con la que viene el dato correspondiente en el GET. Ej const
+                    obj = { "dato1" : "Dato 1"} id="dato1"
+                </li>
+                <li>
+                    Este sistema funciona únicamente en casos donde no se requieren conversión de tipos, ni calculos, ni
+                    filtrados, desde el front. En estos casos debera modificarse setFormValues() definiendo el valor de
+                    cada campo de a uno. Está sistematizado para que corresponda un string o boolean por cada
+                    campo, el cual se recibirá y enviará de la misma manera. En caso de que un campo no necesite recibir
+                    un valor, se pintará vacio, y en caso de que el endpoint del GET de un dato que no se utilice en
+                    ningun campo se lo ignorará.
+                </li>
+            </ul>
+            <p>En el siguiente ejemplo puedes ver el resultado de la implementación. Contiene un console.log con la
+                informacion que se envía al clickear en "Save".</p>
+            <form id="form3" class="ec-form ec-section">
+                <h1 class="form__title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-gear title__icon-bg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+                    <p>Formulario</p>
+                </h1>
+                <div class="ec-form-content">
+                    <div class="field-container ec-border-bottom">
+                        <label for="field6">Label</label>
+                        <div class="ec-input-error-container">
+                            <div class="ec-input-container">
+                                <input id="field6" type="text" class="ec-field form3-field" placeholder="Input 6">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="field-container ec-border-bottom">
+                        <label for="field7">Label</label>
+                        <div class="ec-input-error-container">
+                            <div class="ec-input-container">
+                                <input id="field7" type="text" class="ec-field form3-field" placeholder="Input 7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <label for="field8">Label</label>
+                        <div class="ec-input-container">
+                            <label class="switch">
+                                <input type="checkbox" id="field8" class="form3-field">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-form__footer">
+                    <input type="button" value="Save" id="form3-submit" class="ec-primary-btn">
+                </div>
+            </form>
+            <h5>HTML</h5>
+            <pre class="ec-code">
+    &lt;form id="<b class="ec-pink">form3</b>" class="ec-form ec-section">
+        &lt;h1 class="form__title">
+            &lt;!-- Incluir icono con clase .title__icon-bg -->
+             &lt;p>Formulario&lt;/p>
+        &lt;/h1>
+        &lt;div class="ec-form-content">
+            &lt;div class="field-container ec-border-bottom">
+                &lt;label for="field6">Label&lt;/label>
+                &lt;div class="ec-input-error-container">
+                    &lt;div class="ec-input-container">
+                        &lt;input id="<b>field6</b>" type="text" class="ec-field <b>form3-field</b>" placeholder="Input 6">
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="field-container ec-border-bottom">
+                &lt;label for="field7">Label&lt;/label>
+                &lt;div class="ec-input-error-container">
+                    &lt;div class="ec-input-container">
+                        &lt;input id="<b>field7</b>" type="text" class="ec-field <b>form3-field</b>" placeholder="Input 7">
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="field-container">
+                &lt;label for="field8">Label&lt;/label>
+                &lt;div class="ec-input-container">
+                    &lt;label class="switch">
+                        &lt;input type="checkbox" id="<b>field8</b>" class="<b>form3-field</b>">
+                        &lt;span class="slider">&lt;/span>
+                    &lt;/label>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="ec-form__footer">
+            &lt;input type="button" value="Save" id="<b class="ec-green">form3-submit</b>" class="ec-primary-btn">
+        &lt;/div>
+    &lt;/form></pre>
+
+            <h5>JAVASCRIPT</h5>
+            <p class="subtitle">GET</p>
+            <p class="ec-description">En caso de que un campo no necesite recibir un valor, se pintará vacio, y en caso
+                de que el endpoint del
+                GET de un dato que no se utilice en ningun campo se lo ignorará.</p>
+            <pre class="ec-code">
+const <b class="ec-pink">form3</b> = document.getElementById('form3');
+
+/* este es un objeto de ejemplo que debe ser reemplazado con la respuesta del fetch a al API. 
+Dependiendo de las keys del objeto que devuelva el fetch se definirán los IDs de los campos en el html */
+const fetchSimulation = {
+    "<b>field6</b>": "dato 6",
+    "<b>field7</b>": "dato 7",
+    "<b>field8</b>": true
+}
+
+const setFormValues = (form, getValues) => {
+    const fields = document.querySelectorAll(`.${form.id}-field`);
+    fields.forEach(field => {
+        field.type === 'checkbox'
+            ? field.checked = getValues[field.id]
+            : field.value = getValues[field.id] ?? "";
+    });
+}
+
+const getFormValues = async (form, fetchFunction) => {
+    try {
+        const data = await fetchFunction();
+        setFormValues(form, data);
+    } catch (error) {
+        console.error('Error al obtener datos de la API:', error);
+    }
+};
+
+getFormValues(<b class="ec-pink">form3</b>, fetchSimulation) /* Reemplazar por fetch real */
+</pre>
+            <p class="subtitle">POST/PUT</p>
+            <p class="ec-description">En caso de que un campo se encuentre vacio, no sera incluido en el envio.</p>
+            <pre class="ec-code">
+const <b class="ec-pink">form3</b> = document.getElementById('form3');
+const <b class="ec-green">form3Submit</b> = document.getElementById("form3-submit");
+
+const <b>updateDataform3</b> = async (data) =>{
+/* Reemplazar por función asincrona que actualicen los datos enviandolos al endpoint correspondientes */
+    console.log(data)
+}
+
+const updateFormValues = async (form, updateDataFunction) => {
+    try {
+        let postFormValues = {};
+        const fields = document.querySelectorAll(`.${form.id}-field`);
+        fields.forEach(field => {
+            field.type === 'checkbox'
+                ? postFormValues[field.id] = field.checked
+                : field.value !== "" && (postFormValues[field.id] = field.value);
+        });
+        await updateDataFunction(postFormValues);
+    } catch (error) {
+        console.error('Error al enviar modificaciones a la API:', error);
+    }
+};
+
+<b class="ec-green">form3Submit</b>.addEventListener("click", () => {
+    /* Acompañar con condicionales de las validaciones pertinentes */
+    updateFormValues(<b class="ec-pink">form3</b>, <b>updateDataform3</b>);
+});
+</pre>
+        </section>
+        <!-- Seccion de TRADUCCIONES -->
+        <section id="traducciones" class="ec-text">
+            <h2>Traducciones</h2>
+            <p>Este es un sistema de traducción sin bibliotecas externas. Es recomendable incluir todos los textos en un data-lang y no dejarlos declarados simplemente en el HTML. Muchas palabras parecen no necesitar traducción, por ejemplo "IP" o "Router" probablemente se elija dejar así tanto en español como en inglés, pero es ideal que sea incluido en el data-lang igualmente, para ser consistente y poder traducir en otros idiomas en el futuro.</p>
+            <p class="subtitle">Requerimientos</p>
+            <ul>
+                <li>
+                    Todos los elementos cuyo contenido sea texto deben tener como atributo
+                    data-lang="nombre_a_eleccion". Utilizar un nombre corto descriptivo del contenido.
+                    Ej. &lt;p data-lang="form">&lt;/p>
+                </li>
+                <li>
+                    Todos los inputs de tipo button deben tener como atributo data-lang-value="nombre_a_eleccion" Ej.
+                    &lt;input type="button" data-lang-value="save">
+                </li>
+                <li>
+                    Todos los elementos que lleven tooltips deben tener como atributo
+                    data-lang-tooltips="nombre_a_eleccion" Ej. &lt;p data-lang="info"
+                    data-lang-tooltips="info_msg">&lt;/p>
+                </li>
+                <li>
+                    Definir objetos para cada idioma que tenga como key los data-lang, data-lang-value y
+                    data-lang-tooltips, y como value el texto correspondiente.
+                    Ej. const en = {
+                    "form": "Form",
+                    "Info": "information"
+                    "Info_msg": "This is the info section",
+                    "save": "Save"
+                    }
+                    const es = {
+                    "form": "Formulario",
+                    "Info": "información"
+                    "Info_msg": "Esta es la sección de información",
+                    "save": "Guardar"
+                    }
+                </li>
+            </ul>
+
+            <div class="ec-sidebar ec-sidebar-fic">
+                <a href="javascript:void(0)"><img src="logo-enerclic-blanco.png" alt="Company Logo"
+                        class="ec-sidebar__logo"></a>
+                <div class="ec-sidebar__select-lang-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-translate" viewBox="0 0 16 16">
+                        <path
+                            d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                        <path
+                            d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                    </svg>
+                    <select name="" id="select-lang" class="ec-sidebar__select-lang">
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+
+                    </select>
+                </div>
+                <a href="javascript:void(0)" class="ec-sidebar__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                    <p data-lang="information">información</p>
+                </a>
+                <a href="javascript:void(0)" class="ec-sidebar__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-gear" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+                    <p data-lang="configuration">Configuracion</p>
+                </a>
+            </div>
+
+            <h5>HTML</h5>
+            <pre class="ec-code">
+    &lt;div class="ec-sidebar">
+        &lt;a href="">&lt;!-- incluir logo -->&lt;/a>
+        &lt;div class="ec-sidebar__select-lang-container">
+            &lt;!-- incluir icono -->
+            &lt;select name="" id="<b>select-lang</b>" class="ec-sidebar__select-lang">
+                &lt;option value="<b>en</b>">EN&lt;/option>
+                &lt;option value="<b>es</b>">ES&lt;/option>
+            &lt;/select>
+        &lt;/div>
+        &lt;a href="" class="ec-sidebar__tab">
+        &lt;!-- incluir icono -->
+            &lt;p <b>data-lang</b>="<b class="ec-pink">information</b>">&lt;/p>
+        &lt;/a>
+        &lt;a href="" class="ec-sidebar__tab">
+            &lt;!-- incluir icono -->
+            &lt;p <b>data-lang</b>="<b class="ec-pink">configuration</b>">&lt;/p>
+        &lt;/a>
+    &lt;/div></pre>
+            <h5>JAVASCRIPT</h5>
+            <ul>
+                <li>La funcion setLang() debe llamarse al iniciar la web, al cambiar de opcion en el select de lenguaje
+                    y en caso de usarse un enrutado desde el back tambien debera llamarse cada vez que se entra a una
+                    ruta. (En caso de utilizar el sistema de rutas indicado aquí, esto último no será necesario).</li>
+                <li>
+                    Cuando se añada texto en el DOM dinámicamente desde JavaScript también debe ser incluido en los
+                    objetos (Ej. en, es) y llamarse como key de lang. Ej. document.getElementById('info').innerHTML =
+                    lang.information (importando lang en caso de que se encuentre en otro fichero)
+                </li>
+                <li>
+                    En tu aplicación los objetos que definen la traducción de cada lenguaje (Ej. en, es) probablemente
+                    sean muy largos. Procura definirlos en otros ficheros e importarlos donde se vaya a implementar su
+                    funcionalidad.
+                </li>
+            </ul>
+
+            <pre class="ec-code">
+const <b>en</b> = {
+    "<b class="ec-pink">information</b>": "Information",
+    "<b class="ec-pink">configuration</b>": "Configuration"
+}
+    
+const <b>es</b> = {
+    "<b class="ec-pink">information</b>": "Información",
+    "<b class="ec-pink">configuration</b>": "Configuración"
+}
+
+const languages = { en, es }
+let currentLang = "en";
+let lang = languages[currentLang];
+
+const applySelectedLang = () => {
+	const langTags = document.querySelectorAll('[data-lang]');
+	const langPlaceHolder = document.querySelectorAll('[data-lang-placeholder]');
+	const langToolTips = document.querySelectorAll('[data-lang-tooltips]');
+	const langValue = document.querySelectorAll('[data-lang-value]');
+
+	langTags.forEach((tag) =>  tag.textContent = lang[tag.getAttribute('data-lang')]);
+	langPlaceHolder.forEach((tag) => tag.placeholder = lang[tag.getAttribute('data-lang-placeholder')]);
+	langToolTips.forEach((tag) => tag.title = lang[tag.getAttribute('data-lang-tooltips')]);
+	langValue.forEach((tag) => tag.value = lang[tag.getAttribute('data-lang-value')]);
+}
+
+const setLang = () => {
+	currentLang = document.getElementById("select-lang").value.toLowerCase();
+	lang = languages[currentLang];
+	applySelectedLang();
+}
+    
+setLang()
+document.getElementById('select-lang').addEventListener('change', (e) => setLang() )
+</pre>
+        </section>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
