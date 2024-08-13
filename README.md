@@ -1,6 +1,6 @@
 # Enerclic Web Server Documentation
 
-Este proyecto es una guía de diseño e implementación para sistemas embebidos con recursos limitados, desarrollada en HTML, CSS y JavaScript sin depender de frameworks ni bibliotecas externas. El sistema incluye componentes personalizados y un sistema propio para formularios de configuración, diseñados específicamente para su uso en servidores web embebidos. Esta guía ayudó a la consistencia y sistematización de las implementaciones en toda la empresa, y se utilizó tanto en la refactorización de códigos antiguos como en el desarrollo de nuevas soluciones.
+Este proyecto es una guía de diseño e implementación para sistemas embebidos con recursos limitados, desarrollada en HTML, CSS y JavaScript sin depender de frameworks ni bibliotecas externas. El sistema incluye componentes personalizados y un sistema propio para formularios de configuración, diseñados específicamente para su uso en servidores web embebidos. Esta guía ayudó a la consistencia y sistematización de las implementaciones, y se utilizó tanto en la refactorización de códigos antiguos como en el desarrollo de nuevas soluciones.
 
 ## GitHub Pages
 
